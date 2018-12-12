@@ -68,12 +68,34 @@ def problem4(number_of_stairs, step_size, starting_point, window):
       :type window:            rg.RoseWindow
     """
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # Done: 2. Implement and test this function.
     #          Tests have been written for you (above).
     # IMPORTANT: For PARTIAL CREDIT, you can draw just the black "bottoms"
     #            of the stair steps.
     # -------------------------------------------------------------------------
+    starting_point.attach_to(window)
+    vertical = rg.Line(starting_point, rg.Point(starting_point.x, starting_point.y - step_size))
+    vertical.color = 'magenta'
+    vertical.attach_to(window)
 
+    for k in range (number_of_stairs - 1):
+        horizontal = rg.Line(vertical.end, rg.Point(vertical.end.x + step_size, vertical.end.y))
+        horizontal.color = 'black'
+        horizontal.attach_to(window)
+
+        vertical = rg.Line(horizontal.end, rg.Point(horizontal.end.x, horizontal.end.y - step_size))
+        vertical.color = 'magenta'
+        vertical.attach_to(window)
+
+    horizontal = rg.Line(vertical.end, rg.Point(vertical.end.x + step_size, vertical.end.y))
+    horizontal.color = 'black'
+    horizontal.attach_to(window)
+
+    end_point = rg.Point(horizontal.end.x,horizontal.end.y)
+    end_point.attach_to(window)
+
+
+    window.render()
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
