@@ -51,7 +51,6 @@ def test_factor_sum():
     print()
     print('Expected:', expected)
     print('Actual:  ', actual)
-
     print()
 
     # Test 2:
@@ -61,7 +60,6 @@ def test_factor_sum():
     print()
     print('Expected:', expected)
     print('Actual:  ', actual)
-
     print()
 
     # Test 3:
@@ -71,7 +69,6 @@ def test_factor_sum():
     print()
     print('Expected:', expected)
     print('Actual:  ', actual)
-
     print()
 
     # Test 4:
@@ -81,6 +78,7 @@ def test_factor_sum():
     print()
     print('Expected:', expected)
     print('Actual:  ', actual)
+    print()
 
     #Test 5:
     print('Test 5')
@@ -122,3 +120,4 @@ def factor_sum(n):
     ###########################################################################
     # DO NOT modify the above line of code!
     ###########################################################################
+main()
